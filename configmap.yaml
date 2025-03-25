@@ -1,0 +1,38 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: argocd-demo-webpage
+data:
+  index.html: |
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>ArgoCD Demo App</title>
+        <style>
+            body {
+                font-family: Arial, sans-serif;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                height: 100vh;
+                margin: 0;
+                background-color: #f0f0f0;
+                text-align: center;
+            }
+            .container {
+                background-color: white;
+                padding: 30px;
+                border-radius: 10px;
+                box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <h1>Welcome to ArgoCD Demo</h1>
+            <p>Version 1.0</p>
+            <p>Deployed with GitOps ❤️</p>
+        </div>
+    </body>
+    </html>

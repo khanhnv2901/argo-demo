@@ -1,0 +1,28 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: argocd-demo-app
+  labels:
+    app: argocd-demo
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: argocd-demo
+  template:
+    metadata:
+      labels:
+        app: argocd-demo
+    spec:
+      containers:
+      - name: argocd-demo
+        image: nginx:alpine
+        ports:
+        - containerPort: 80
+        volumeMounts:
+        - name: webpage
+          mountPath: /usr/share/nginx/html
+      volumes:
+      - name: webpage
+        configMap:
+          name: argocd-demo-webpage
