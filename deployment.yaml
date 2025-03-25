@@ -18,11 +18,15 @@ spec:
       - name: argocd-demo
         image: nginx:alpine
         ports:
-        - containerPort: 80
+        - containerPort: 8080
         volumeMounts:
         - name: webpage
-          mountPath: /usr/share/nginx/html
+          mountPath: /usr/share/nginx/html/index.html
+          subPath: index.html
       volumes:
       - name: webpage
         configMap:
           name: argocd-demo-webpage
+          items:
+          - key: index.html
+            path: index.html
