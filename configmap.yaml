@@ -31,7 +31,7 @@ data:
     <body>
         <div class="container">
             <h1>Welcome to ArgoCD Demo</h1>
-            <p>Version 2.0</p>
+            <p>Version 1.0</p>
             <p>GitOps and Kubernetes: CD with ArgoCD  ❤️</p>
         </div>
     </body>
