@@ -32,7 +32,7 @@ data:
         <div class="container">
             <h1>Welcome to ArgoCD Demo</h1>
             <p>Version 1.0</p>
-            <p>ArgoCD in Action  ❤️</p>
+            <p>ArgoCD in Action ❤️</p>
         </div>
     </body>
     </html>
